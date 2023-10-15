@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document object model</title>
+   <script type="text/javascript">
+    var  width=100;
+  var id;
+function increase()
+{
+console.log('hello')
+id=setInterval(zoomin,20);
+}
+function zoomin()
+{
+if(width<300)
+{
+width=width+2;
+document.getElementById('img1').style.width=width;
+console.log(width)
+}
+else
+{
+clearInterval(id)
+}
+}
+</script>
+</head>
+<body>
+    <img onmouseover="increase()" id='img1' width="100" src="red.png"/>
+  
+</body>
+</html>

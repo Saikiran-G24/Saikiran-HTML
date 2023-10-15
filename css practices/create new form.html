@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .main {
+      margin-left:200px;
+      color:blue;
+    }
+
+    .register {
+      color: green;
+      font-size: 30px;
+      margin-left: 500px;
+    }
+
+    #formdemo {
+      margin-left: 500px;
+    }
+    </style>
+  <!-- <link rel="stylesheet" href="form.css" /> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>registration form</title>
+</head>
+<body style="background-color: white;">
+  <div class="main">
+    <div class="register">
+    </div>
+  </div>
+    <h1 style="margin-left: 500px;">Register here</h1>
+      <form id="formdemo" method="post">
+        <label>first name:</label> <br>
+          <input type="text" name="fname" id="name" placeholder="enter your first name"  />
+        <div >Enter your last name:</div>
+        <input type="text" name="lname" id="name" placeholder="enter your last name">
+          <div>Enter father name:</div>
+    
+        <input type="text" name="fname"id="name" placeholder="enter your father name">
+        <br><lable>Enter your age:</lable><br>
+        <input type="text" name="age"id="age"placeholder="enter your age">
+        <div style="background-color: yellow;color:blue;">Gender:</div>
+        <input type="radio"name="gender"checked="checked">male
+        <input type="radio"name="gender"checked="checked">female
+        <div>Enter your date of birth:</div>
+        <input type="date"placeholder="enter your DOB"><br>
+        <label style="background-color: yellow;color:blue">Branch:</label>
+        <select>
+        <option>csc</option>
+        <option>ece</option>
+        <option>mec</option>
+        <option>civil</option>
+        <option>it</option>
+        <option>mba</option>
+        <option>m.tech</option>
+        <option>B.com</option></select>
+        <div>Enter your Address:
+        <!-- <input type="text"placeholder="your present Address"> -->
+        <div><textarea rows="5" cols="40">Enter your perminent address</textarea></div>
+        </div>
+        <div>Upoald a file:</div>
+        <input type="file" name="file" value="upload file" accept=".pdf">
+        <p><Input type="submit" style="color: red" ></p>
+    
+
+
+
+
+        
+      </form>
+    </div><!-- end register-->
+  </div><!--end main-->
+
+</body>
+</html>

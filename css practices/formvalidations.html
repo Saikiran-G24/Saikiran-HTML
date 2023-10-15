@@ -1,0 +1,35 @@
+<!-- username (or) password any one of the kept blank not entered to next page and it is showing pop msg ''enter something' and it is in same page also. -->
+<html>
+    <head>
+        <title>
+            document object model and form validations
+        </title>
+        <form onsubmit=" return dis()" action="new.html"> <!-- whenever you want submit data to server or other page for process date we can use form tag -->
+            <input id="id1" type="text" placeholder="Enter username">
+            <br><br>
+            <input id="id2" type="password" placeholder="Enter password"><br><br>
+             <button id="btn1" type="submit" >submit</button><!-- within form tag, here type='submit' refresh the page when click
+                                                   within form tag, here type='button' not refresh the page when click -->
+            </form>
+    </head>
+    <body>
+        <script>
+            function dis()
+            {
+              var user1=  document.getElementById('id1').value
+               var user2= document.getElementById('id2').value
+               if(user1.trim()==''||user2.trim()=='')//if(user1.value==''||user2.value=='') and remove .value of above variables
+               //trim removes the all blank spaces and it orignal to the nothing entered
+               {
+               alert('Enter something')
+               return false;//not redireted to next page
+               }
+            else
+              return true; //(or) we can write only true
+            }
+            btn1.style.color='white';
+            btn1.style.background='blue';
+
+        </script>
+        </body>
+    </html>

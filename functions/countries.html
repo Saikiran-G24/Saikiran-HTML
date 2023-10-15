@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>countries and its states</title>
+        <select onchange="dis()"  id="id1">
+            <option selected disabled hidden>Choose country</option>
+            <option value="IND">India</option>
+            <option value="PAK">Pakistan</option>
+            <option value="BAN">Bangladesh</option>
+        </select>
+        <select id="cities">
+        </select>
+</head>
+<body>
+<script> 
+ let contries=[
+    {name:'IND',value:'In',cities:'delhi'},
+    {name:'PAK',value:'Pk',cities:'lahore'},
+    {name:'BAN',value:'in',cities:'Dhaka'},
+]
+function removeAllChildNodes(parent)
+{
+while(parent.firstChild)
+{
+    parent.removeChild(parent.firstChild)
+}
+}
+function dis()
+{
+    let result = [];
+    let country=document.getElementById('id1').value;
+    console.log(country)
+    for(let i= 0; i < contries.length; i++) {
+    
+    if(contries[i].name == country) {
+        result = [contries[i]['cities']]
+    //    alert(result)
+    }
+}
+// console.log(result)
+let citiesoptions = document.getElementById("cities");
+removeAllChildNodes(citiesoptions)
+for(let i=0; i< result.length;i++) {
+    let opt = document.createElement("option");
+     opt.value = result[i]
+    console.log('checking res'+result[i])
+    opt.innerHTML = result[i]
+citiesoptions.appendChild(opt);
+}
+
+
+}
+</script>
+</body>
+</html>

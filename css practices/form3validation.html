@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document object model and form validations</title>
+    <form onsubmit="return dis()" action="new.html">
+    <input id="id1" type="text" placeholder="Enter username">
+    <label id="id3" style="color:blue;visibility:hidden;">Enter username</label><br><br>
+    <input id="id2" type="password" placeholder="Enter password">
+    <lable id="id4"  style="color: green;visibility:hidden;">Enter password</lable><br><br>
+    <button id="btn1">submit</button>
+    </form>
+
+</head>
+<body>
+        <script>
+            function dis()
+            {
+                let user1=document.getElementById('id1').value;
+                let user2=document.getElementById('id2').value;                
+                console.log('first',user1,typeof user1)
+                console.log('second',user2)
+                if(user1.trim()=='')
+                {
+                    console.log('within "if"condition user1 is:',user1)
+                alert('Enter username')
+                return false;
+                }
+            else if(user2.trim()=='')
+            {
+                console.log('within "else if" condition user2 is:',user2)
+            alert('Enter password')
+            return false;
+            }
+            else if(user2.trim().length<7)
+            {
+                alert('password length minimum 8 charecters')
+                return false;
+            }
+            else 
+            return true;
+            }
+            </script>
+            
+
+    
+</body>
+</html>

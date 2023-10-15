@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> Document object model and getElementById('')</title>
+        <div onmouseover='event1()' onmouseout='event2()' id='img1'>hello</div>
+    </head>
+    <body> 
+        <script>
+function event1()
+{
+    document.getElementById('img1').style.background='orange'
+}
+function event2()
+{
+    document.getElementById('img1').style.background='green'
+}
+</script>
+    </body>
+</html> 
