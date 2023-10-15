@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document object model and fadein and fadeout of img</title>
+    <button onclick="fadeout()" placeholder="fadeout" >fade-out</button><br><br>
+    <img id='id1' src="green.png"><br><br>
+    <button onclick="fadein()" placeholder="fadein">fade-in</button>
+
+</head>
+<body>
+    <script>
+        var opacity;
+        var id=0;
+        function fadeout()
+            {
+                id=setInterval(hide,100);//id=window.setInterval(hide,100)
+
+            }
+            function fadein()
+            {
+                id=setInterval(show,100);//id=window.setInterval(hide,100)
+
+            }
+            function show()
+            {
+                var img=document.getElementById('id1')
+                console.log('initial opacity value is: '+opacity)
+                opacity=Number(window.getComputedStyle(img).getPropertyValue('opacity'))
+                console.log('opacity value is: '+opacity)
+                if(opacity<1)
+                {
+                    opacity=opacity+0.1
+                    img.style.opacity=opacity;
+                }
+                else
+                {
+                 clearInterval(id)    
+                }
+            }
+            function hide()
+            {
+                var img=document.getElementById('id1')
+                console.log('initial opacity value is: '+opacity)
+                opacity=Number(window.getComputedStyle(img).getPropertyValue('opacity'))
+                console.log('opacity value is: '+opacity)
+                if(opacity>0)
+                {
+                    opacity=opacity-0.1
+                    img.style.opacity=opacity;
+                }
+                else
+                {
+                 clearInterval(id)    
+                }
+            }
+        
+        </script>
+    
+</body>
+</html>

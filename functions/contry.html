@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document object model</title>
+    <select id="id1" onchange="dis()">
+        <option selected disabled hidden>select county name</option>
+        <option value="IND">india</option>
+        <option value="PAK">pakistan</option>
+        <option value="BAN">bangladesh</option>
+        </select>
+        <select id="id2">
+        </select>
+</head>
+<body>
+    <script>
+         let contries=[
+    {name:'IND',value:'In',cities:['delhi','mumbai']},
+    {name:'PAK',value:'Pk',cities:['lahore','karachi']},
+    {name:'BAN',value:'in',cities:['Dhaka','chittaggon']},
+]
+let result=[];
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+function dis()
+{
+    let contry=document.getElementById('id1').value
+for(i=0;i<contries.length;i++)
+{
+    if(contries[i].name==contry)
+    {
+        result=[contries[i].cities];
+        console.log(result)
+    }
+}
+//let optionslist = document.getElementsByClassName("options");
+
+let par=document.getElementById('id2')
+removeAllChildNodes(par)
+for(i=0;i<result.length;i++)
+{
+let create=document.createElement('option')
+create.value=result[i]
+create.innerHTML=result[i]
+par.appendChild(create)
+}
+}
+
+  </script>
+    
+</body>
+</html>

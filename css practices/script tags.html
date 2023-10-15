@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+    function display()
+{ document.getElementById("display").innerHTML="script in external file changed"
+    }
+</script>
+
+        <body>
+            <h1 id="display">text here</h1>
+            <!-- <button type="button" onclick='document.getElementById("sai").innerHTML="content changed"'>click here</button> -->
+            <button type="button" onclick="display()">click me</button>
+
+            </body>
+            </head>
+       
+    </html>

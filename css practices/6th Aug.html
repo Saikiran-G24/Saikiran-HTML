@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            .text{color:red}
+            </style>
+        <h1 id="content">helo everyone</h1>
+        <body>
+            
+            <button type="button" onclick='getElementById("content").innerHTML="change content"'>click me</button>
+                
+<h1>change in attributes</h1>
+<image id="pic" src="red.png" alt="saikiran red pic implemented on screen" width="30px" height="20px" align="left" ><br><br><br>
+    <button type="button"onclick='getElementById("pic").src="blue.png"'>click me</button>
+<h1>change in css</h1>
+<h2 id="m1">we have to write some text here</h2>
+<p id="m1">we have to write some text here</p>
+<h2 class="text">we have to write some text here</h2>
+<p class="text">we have to write some text here</p> 
+<!-- <button type="button" alt="green" onclick="demo()">click here</button>  -->
+ <button type="button"onclick='getElementById("m1").style.color="blue"'>click me</button>
+
+<button type="button" onclick='document.getElementsByClassName("text")[1].style.color="yellow"'>click me</button> -->
+<h1>hide and display content</h1>
+<h2 id="hide">write any content over display it will be hide</h2>
+<button type="button" onclick='getElementById("hide").style.display="none"'>hide</button>
+<button type="button" onclick='getElementById("hide").style.display="block"'>display</button>
+
+<!-- <script>
+    function demo() {
+        let id_elements = document.getElementById("m1");
+        let class_elements = document.getElementsByClassName("text");
+        console.log("ID elemnts",id_elements);
+        console.log("class elemnts",class_elemensts);
+    }
+    </script> -->
+            </body>
+        </head>
+        </html>

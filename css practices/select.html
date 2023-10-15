@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model and getElementById('').innerHTML</title>
+    <select  id="select-box">
+        <option value="javascript loosly type language">js</option>
+        <option value="single-threaded synchronous language">javascript</option>
+        <option value="multi-threaded asynchronous language">Document object model</option>
+   
+    </select>
+    <br><br>
+    <button onclick="buttonclicked()">click me</button>
+
+</head>
+<body>
+    <script>
+function buttonclicked()
+{
+    let select=document.getElementById("select-box")
+    
+    alert(select.options[select.selectedIndex].value)
+    
+}
+</script>
+    
+    
+</body>
+</html>

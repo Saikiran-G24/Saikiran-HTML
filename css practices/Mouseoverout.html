@@ -1,0 +1,66 @@
+
+///Mouseover and mouseout img will chage
+
+<html>
+    <head>
+        <title> Document object model and getElementById('')</title>
+        <img onmouseover='event1()' onmouseout='event2()' id='img1' src='green.png' width="300">
+    </head>
+    <body> 
+        <script>
+function event1()
+{
+    document.getElementById('img1').src='../flowers.jpg'//(or) red.png (or)./red.png
+}
+function event2()
+{
+    document.getElementById('img1').src='../saikiran.jpg' //(or)green.png (or)./green.png
+}
+</script>
+    </body>
+</html>   -->
+
+
+//Mouseover and mouseout text will chage
+<html>
+    <head>
+        <title> Document object model and getElementById('')</title>
+        <div onmouseover='event1()' onmouseout='event2()' id='img1'>hello</div>
+    </head>
+    <body> 
+        <script>
+function event1()
+{
+    document.getElementById('img1').innerHTML='javascript is single-threaded synchronous language'
+}
+function event2()
+{
+    document.getElementById('img1').innerHTML='javascript is muti-threadead asynchronous language'
+}
+</script>
+    </body>
+</html>
+
+
+
+//Mouseover and mouseout color of text will chage.
+<html>
+    <head>
+        <title> Document object model and getElementById('')</title>
+        <div onmouseover='event1()' onmouseout='event2()' id='img1'>hello</div>
+    </head>
+    <body> 
+        <script>
+function event1()
+{
+    document.getElementById('img1').style.color='red'
+}
+function event2()
+{
+    document.getElementById('img1').style.color='green'
+}
+</script>
+    </body>
+</html> 
+
+
