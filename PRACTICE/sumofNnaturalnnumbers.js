@@ -33,3 +33,31 @@ console.log("by using recursive result is "+sumofn)
 // }
 // log(1)
 
+
+
+
+
+//Sum of N natural numbers
+let num=prompt('enter a value');
+let res=0;
+const Nnat=function(){
+    for(i=0;i<num;i++){
+        res+=i
+    }
+    return res;
+}
+Nnat()
+console.log(res)
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,9 +11,8 @@ function pn()
         console.log("number is Negative",i)
     }
         else {
-            console.log("number is Zero",i)
+            console.log("number is Zero or nutral")
 
-        
     }
 
 }

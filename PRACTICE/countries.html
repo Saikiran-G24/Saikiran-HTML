@@ -1,4 +1,4 @@
-<html>
+ <html>
     <head>
         <title>countries and its states</title>
         <select onchange="dis()"  id="id1">
@@ -32,17 +32,17 @@ function dis()
     for(let i= 0; i < contries.length; i++) {
     
     if(contries[i].name == country) {
-        result = [contries[i]['cities']]
-    //    alert(result)
+        result = [contries[i].cities]
+    console.log(result.length)
     }
 }
 // console.log(result)
 let citiesoptions = document.getElementById("cities");
-removeAllChildNodes(citiesoptions)
+// removeAllChildNodes(citiesoptions)
 for(let i=0; i< result.length;i++) {
     let opt = document.createElement("option");
      opt.value = result[i]
-    console.log('checking res'+result[i])
+    console.log('checking res '+result[i])
     opt.innerHTML = result[i]
 citiesoptions.appendChild(opt);
 }
@@ -51,4 +51,9 @@ citiesoptions.appendChild(opt);
 }
 </script>
 </body>
-</html>
+</html>  
+
+
+
+
+
